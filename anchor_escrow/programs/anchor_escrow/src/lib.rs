@@ -2,7 +2,7 @@ use anchor_lang::prelude::*;
 
 mod state;
 mod errors;
-mode instructions;
+mod instructions;
 use instructions::*;
 
 declare_id!("3acf7jULzuiDE41DzhKyT46pZ3FscRHBUxiHN4pgvv5y");
@@ -16,19 +16,19 @@ pub mod anchor_escrow {
         Ok(())
     }
 
-    #[instructions(discriminator = 0)]
+    #[instruction(discriminator = 0)]
     pub fn make(ctx: Context<Make>, seed: u64, receive: u64, amount: u64) ->Result<()> {
-
+Ok(())
     }
 
-    #[instructions(discriminator = 1)]
+    #[instruction(discriminator = 1)]
     pub fn take(ctx: Context<Take>) -> Result<()>{
-
+Ok(())
     }
     
     #[instruction(discriminator = 2)]
     pub fn refund(ctx: Context<Refund>) -> Result<()>{
-
+Ok(())
     }
 }
 
