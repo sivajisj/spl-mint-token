@@ -1,5 +1,5 @@
-   0.134687031s  INFO prepare_target{force=false package_id=anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow) target="anchor_escrow"}: cargo::core::compiler::fingerprint: fingerprint error for anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow)/Check { test: false }/TargetInner { ..: lib_target("anchor_escrow", ["cdylib", "lib"], "/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow/src/lib.rs", Edition2021) }
-   0.134778843s  INFO prepare_target{force=false package_id=anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow) target="anchor_escrow"}: cargo::core::compiler::fingerprint:     err: failed to read `/workspaces/spl-mint-token/anchor_escrow/target/debug/.fingerprint/anchor_escrow-810dd7dccafca5cb/lib-anchor_escrow`
+   0.143120433s  INFO prepare_target{force=false package_id=anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow) target="anchor_escrow"}: cargo::core::compiler::fingerprint: fingerprint error for anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow)/Check { test: false }/TargetInner { ..: lib_target("anchor_escrow", ["cdylib", "lib"], "/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow/src/lib.rs", Edition2021) }
+   0.143153175s  INFO prepare_target{force=false package_id=anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow) target="anchor_escrow"}: cargo::core::compiler::fingerprint:     err: failed to read `/workspaces/spl-mint-token/anchor_escrow/target/debug/.fingerprint/anchor_escrow-810dd7dccafca5cb/lib-anchor_escrow`
 
 Caused by:
     No such file or directory (os error 2)
@@ -43,8 +43,8 @@ Stack backtrace:
   25: __libc_start_main_impl
              at ./csu/../csu/libc-start.c:360:3
   26: <unknown>
-   0.202405969s  INFO prepare_target{force=false package_id=anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow) target="anchor_escrow"}: cargo::core::compiler::fingerprint: fingerprint error for anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow)/Check { test: true }/TargetInner { ..: lib_target("anchor_escrow", ["cdylib", "lib"], "/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow/src/lib.rs", Edition2021) }
-   0.202423251s  INFO prepare_target{force=false package_id=anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow) target="anchor_escrow"}: cargo::core::compiler::fingerprint:     err: failed to read `/workspaces/spl-mint-token/anchor_escrow/target/debug/.fingerprint/anchor_escrow-950bb595f7fa4f1c/test-lib-anchor_escrow`
+   0.218065074s  INFO prepare_target{force=false package_id=anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow) target="anchor_escrow"}: cargo::core::compiler::fingerprint: fingerprint error for anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow)/Check { test: true }/TargetInner { ..: lib_target("anchor_escrow", ["cdylib", "lib"], "/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow/src/lib.rs", Edition2021) }
+   0.218085562s  INFO prepare_target{force=false package_id=anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow) target="anchor_escrow"}: cargo::core::compiler::fingerprint:     err: failed to read `/workspaces/spl-mint-token/anchor_escrow/target/debug/.fingerprint/anchor_escrow-950bb595f7fa4f1c/test-lib-anchor_escrow`
 
 Caused by:
     No such file or directory (os error 2)
@@ -89,6 +89,6 @@ Stack backtrace:
              at ./csu/../csu/libc-start.c:360:3
   26: <unknown>
     Checking anchor_escrow v0.1.0 (/workspaces/spl-mint-token/anchor_escrow/programs/anchor_escrow)
-error: could not compile `anchor_escrow` (lib) due to 2 previous errors; 1 warning emitted
-warning: build failed, waiting for other jobs to finish...
 error: could not compile `anchor_escrow` (lib test) due to 2 previous errors; 1 warning emitted
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `anchor_escrow` (lib) due to 2 previous errors; 1 warning emitted
