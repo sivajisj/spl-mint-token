@@ -5,32 +5,38 @@ mod errors;
 mod instructions;
 use instructions::*;
 
-declare_id!("3acf7jULzuiDE41DzhKyT46pZ3FscRHBUxiHN4pgvv5y");
+declare_id!("22222222222222222222222222222222222222222222");
 
 #[program]
 pub mod anchor_escrow {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        msg!("Greetings from: {:?}", ctx.program_id);
-        Ok(())
+
+
+    // ✅ Main escrow creation — stores details and deposits Token A
+    pub fn make(ctx: Context<Make>, seed: u64, receive: u64, amount: u64) -> Result<()> {
+        instructions::make::handler(ctx, seed, receive, amount)
     }
 
-    #[instruction(discriminator = 0)]
-    pub fn make(ctx: Context<Make>, seed: u64, receive: u64, amount: u64) ->Result<()> {
-Ok(())
+    // ✅ Accepts the escrow — transfers Token B, closes vault, releases Token A
+    pub fn take(ctx: Context<Take>) -> Result<()> {
+        instructions::take::handler(ctx)
     }
 
-    #[instruction(discriminator = 1)]
-    pub fn take(ctx: Context<Take>) -> Result<()>{
-Ok(())
-    }
-    
-    #[instruction(discriminator = 2)]
-    pub fn refund(ctx: Context<Refund>) -> Result<()>{
-Ok(())
+    // ✅ Refunds escrow — returns Token A to maker, closes vault and escrow
+    pub fn refund(ctx: Context<Refund>) -> Result<()> {
+        instructions::refund::handler(ctx)
     }
 }
 
-#[derive(Accounts)]
-pub struct Initialize {}
+
+
+
+
+// ERROR: Custom program error: 0x1004
+
+// PROGRAM LOGS:
+//  22222222222222222222222222222222222222222222 invoke [1]
+//  log: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.
+//  22222222222222222222222222222222222222222222 consumed 3790 of 1400000 compute units
+//  22222222222222222222222222222222222222222222 failed: custom program error: 0x1004
